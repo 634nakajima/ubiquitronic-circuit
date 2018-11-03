@@ -13213,8 +13213,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <parts>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="GND2" library="MyLibraries" deviceset="GND" device=""/>
-<part name="S1" library="MyLibraries" deviceset="10-XX(タクトスイッチ)" device=""/>
-<part name="S2" library="MyLibraries" deviceset="10-XX(タクトスイッチ)" device=""/>
+<part name="IO0" library="MyLibraries" deviceset="10-XX(タクトスイッチ)" device=""/>
+<part name="RST" library="MyLibraries" deviceset="10-XX(タクトスイッチ)" device=""/>
 <part name="GND9" library="MyLibraries" deviceset="GND" device=""/>
 <part name="GND1" library="MyLibraries" deviceset="GND" device=""/>
 <part name="GND8" library="MyLibraries" deviceset="GND" device=""/>
@@ -13273,8 +13273,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="GND2" gate="GND" x="180.34" y="83.82"/>
-<instance part="S1" gate="1" x="132.08" y="71.12" rot="R270"/>
-<instance part="S2" gate="1" x="177.8" y="71.12" rot="R270"/>
+<instance part="IO0" gate="1" x="132.08" y="71.12" rot="R270"/>
+<instance part="RST" gate="1" x="177.8" y="71.12" rot="R270"/>
 <instance part="GND9" gate="GND" x="109.22" y="55.88"/>
 <instance part="GND1" gate="GND" x="127" y="83.82"/>
 <instance part="GND8" gate="GND" x="139.7" y="55.88"/>
@@ -13387,13 +13387,13 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="GND9" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="S1" gate="1" pin="S"/>
+<pinref part="IO0" gate="1" pin="S"/>
 <wire x1="137.16" y1="71.12" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="GND" pin="GND"/>
 <wire x1="139.7" y1="71.12" x2="139.7" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="S2" gate="1" pin="P"/>
+<pinref part="RST" gate="1" pin="P"/>
 <wire x1="172.72" y1="71.12" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="GND" pin="GND"/>
 <wire x1="170.18" y1="71.12" x2="170.18" y2="58.42" width="0.1524" layer="91"/>
@@ -13446,7 +13446,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <net name="N$10" class="0">
 <segment>
 <wire x1="127" y1="91.44" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="S1" gate="1" pin="P"/>
+<pinref part="IO0" gate="1" pin="P"/>
 <wire x1="124.46" y1="71.12" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="71.12" x2="127" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -13460,7 +13460,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="185.42" y1="68.58" x2="185.42" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="71.12" x2="185.42" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="101.6" x2="162.56" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="S2" gate="1" pin="S"/>
+<pinref part="RST" gate="1" pin="S"/>
 <wire x1="182.88" y1="71.12" x2="185.42" y2="71.12" width="0.1524" layer="91"/>
 <junction x="185.42" y="71.12"/>
 <pinref part="R4" gate="G$1" pin="1"/>

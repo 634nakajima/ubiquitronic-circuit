@@ -69,6 +69,9 @@
 <hole x="3" y="3" drill="3.2"/>
 <hole x="3" y="47" drill="3.2"/>
 <hole x="47" y="30" drill="3.2"/>
+<text x="45" y="26" size="1.27" layer="21" rot="R90">Rx Tx GND</text>
+<text x="11" y="29" size="1.27" layer="21" rot="R90">3.3V</text>
+<text x="14" y="37" size="1.27" layer="21">5V</text>
 </plain>
 <libraries>
 <library name="MyLibraries">
@@ -1716,28 +1719,30 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="S1" library="MyLibraries" package="B3F-10XX" value="" x="43.28" y="5.91" rot="R180">
+<element name="IO0" library="MyLibraries" package="B3F-10XX" value="" x="43.28" y="5.91" smashed="yes" rot="R180">
 <attribute name="MF" value="" x="43.28" y="5.91" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="B3F-1000" x="43.28" y="5.91" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="41.328" y="2.227" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="OC_FARNELL" value="176432" x="43.28" y="5.91" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="36M3542" x="43.28" y="5.91" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="46.328" y="10.99" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="S2" library="MyLibraries" package="B3F-10XX" value="" x="43.28" y="13.53">
+<element name="RST" library="MyLibraries" package="B3F-10XX" value="" x="43.28" y="13.53" smashed="yes">
 <attribute name="MF" value="" x="43.28" y="13.53" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="B3F-1000" x="43.28" y="13.53" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="38.232" y="17.213" size="1.27" layer="25" ratio="10"/>
 <attribute name="OC_FARNELL" value="176432" x="43.28" y="13.53" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="36M3542" x="43.28" y="13.53" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="40.232" y="8.45" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="J1" library="con-jack" library_urn="urn:adsk.eagle:library:154" package="DCJ0202" value="DCJ0202" x="41.5064" y="41.5832" smashed="yes" rot="R90">
 <attribute name="MF" value="" x="41.5064" y="41.5832" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="41.5064" y="41.5832" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="54.2064" y="42.8532" size="1.27" layer="25" rot="R90"/>
 <attribute name="OC_FARNELL" value="unknown" x="41.5064" y="41.5832" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="41.5064" y="41.5832" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="51.6664" y="36.5032" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="IC2" library="ic-package" library_urn="urn:adsk.eagle:library:239" package="SOCKET-16" value="" x="26.96" y="30.31" smashed="yes">
-<attribute name="NAME" x="39.406" y="30.437" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="16.406" y="29.437" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="20.61" y="29.675" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X04" value="" x="26.96" y="37.93"/>
@@ -1786,8 +1791,12 @@ design rules under a new name.</description>
 </element>
 <element name="U1" library="BS21Lab-Regulators" package="CUSTOM" value="TA4803F" x="7" y="32" rot="R90"/>
 <element name="U2" library="BS21Lab-Regulators" package="CUSTOM" value="TA4805F" x="15" y="41"/>
-<element name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X03" value="" x="42" y="30" rot="R270"/>
-<element name="IC3" library="sensor" package="WROOM-02" value="ESP-WROOM-02" x="27" y="14"/>
+<element name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X03" value="" x="42" y="30" smashed="yes" rot="R270">
+<attribute name="VALUE" x="38.825" y="33.81" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="IC3" library="sensor" package="WROOM-02" value="ESP-WROOM-02" x="27" y="14" smashed="yes">
+<attribute name="VALUE" x="20.65" y="11.46" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="GND" class="1">
@@ -1804,8 +1813,8 @@ design rules under a new name.</description>
 <contactref element="C7" pad="2"/>
 <contactref element="LED1" pad="K"/>
 <contactref element="R2" pad="2"/>
-<contactref element="S1" pad="1"/>
-<contactref element="S2" pad="3"/>
+<contactref element="IO0" pad="1"/>
+<contactref element="RST" pad="3"/>
 <contactref element="U1" pad="P$2"/>
 <contactref element="U2" pad="P$2"/>
 <polygon width="0.6096" layer="16">
@@ -1842,7 +1851,7 @@ design rules under a new name.</description>
 <wire x1="14.4018" y1="8.382" x2="14.34" y2="8.45" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$10">
-<contactref element="S1" pad="3"/>
+<contactref element="IO0" pad="3"/>
 <contactref element="R1" pad="1"/>
 <contactref element="IC3" pad="8"/>
 <wire x1="14.7828" y1="6.3246" x2="17.9832" y2="6.3246" width="0.1524" layer="1"/>
@@ -1858,7 +1867,7 @@ design rules under a new name.</description>
 <wire x1="18.0594" y1="6.3246" x2="18.05" y2="6.4" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$4">
-<contactref element="S2" pad="1"/>
+<contactref element="RST" pad="1"/>
 <contactref element="R4" pad="1"/>
 <contactref element="IC3" pad="15"/>
 <wire x1="36.6522" y1="12.4206" x2="35.9664" y2="12.4206" width="0.1524" layer="1"/>
